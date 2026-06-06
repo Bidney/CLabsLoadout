@@ -1,2 +1,2 @@
 # CLabsLoadout
-CLabs Loadout Chrome exxtension
+CLabs Loadout Chrome extension
