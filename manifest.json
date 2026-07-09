@@ -1,9 +1,10 @@
 {
   "manifest_version": 3,
   "name": "CLabs Loadout",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Create collections of tabs and open them in a group with one click.",
-  "permissions": ["tabGroups", "storage"],
+  "permissions": ["tabGroups", "storage", "tabs", "contextMenus", "favicon"],
+  "omnibox": { "keyword": "lo" },
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
