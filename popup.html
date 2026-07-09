@@ -1,47 +1,70 @@
 <!doctype html>
 <html><head><meta charset="utf-8">
 <style>
-  body { font: 13px system-ui; width: 320px; margin: 0; padding: 10px; color:#1f2937; }
+  :root {
+    --bg: #ffffff; --fg: #1f2937; --muted: #6b7280; --hover: #f3f4f6;
+    --border: #d1d5db; --chip: #e5e7eb; --accent: #3b82f6; --ok: #10b981;
+    --danger-bg: #fee2e2; --danger-fg: #b91c1c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1f2937; --fg: #f3f4f6; --muted: #9ca3af; --hover: #374151;
+      --border: #4b5563; --chip: #374151; --accent: #3b82f6; --ok: #059669;
+      --danger-bg: #7f1d1d; --danger-fg: #fecaca;
+    }
+  }
+  body { font: 13px system-ui; width: 340px; margin: 0; padding: 10px; color: var(--fg); background: var(--bg); }
   h3 { margin: 0 0 8px; font-size: 13px; }
   .ws { display:flex; align-items:center; gap:6px; padding:6px; border-radius:6px; }
-  .ws:hover { background:#f3f4f6; }
+  .ws:hover { background: var(--hover); }
+  .ws.dragging { opacity: .4; }
+  .ws.dropTarget { outline: 2px solid var(--accent); outline-offset: -2px; }
   .dot { width:10px; height:10px; border-radius:50%; flex:0 0 auto; }
-  .ws .name { flex:1; font-weight:600; }
+  .dot.live { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--ok); }
+  .fav { width:16px; height:16px; flex:0 0 auto; border-radius:3px; }
+  .ws .name { flex:1; font-weight:600; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .count { font-size:11px; color: var(--muted); background: var(--chip); border-radius:8px; padding:1px 6px; flex:0 0 auto; }
   button { cursor:pointer; border:none; border-radius:5px; padding:4px 8px; font-size:12px; }
-  .open  { background:#3b82f6; color:#fff; }
-  .close { background:#e5e7eb; }
-  .edit  { background:transparent; color:#6b7280; }
-  .add   { width:100%; margin-top:8px; padding:7px; background:#10b981; color:#fff; }
-  .empty { color:#9ca3af; padding:8px 0; }
+  .open  { background: var(--accent); color:#fff; }
+  .close { background: var(--chip); color: var(--fg); }
+  .sync, .edit { background:transparent; color: var(--muted); padding:4px 4px; }
+  .add   { width:100%; margin-top:8px; padding:7px; background: var(--ok); color:#fff; }
+  .capture { width:100%; margin-top:6px; padding:7px; background: var(--chip); color: var(--fg); }
+  .empty { color: var(--muted); padding:8px 0; }
+  .error { display:none; margin-top:8px; padding:7px 9px; border-radius:6px; background: var(--danger-bg); color: var(--danger-fg); font-size:12px; }
+  .error.show { display:block; }
 
   /* editor */
   #editor { display:none; }
   #editor.show { display:block; }
   #list.hide { display:none; }
   input, textarea { width:100%; box-sizing:border-box; padding:6px; margin:4px 0;
-    border:1px solid #d1d5db; border-radius:5px; font:inherit; }
+    border:1px solid var(--border); border-radius:5px; font:inherit; color: var(--fg); background: var(--bg); }
   textarea { min-height:90px; resize:vertical; }
   .row { display:flex; gap:6px; margin-top:6px; }
   .row button { flex:1; padding:7px; }
-  .save   { background:#3b82f6; color:#fff; }
-  .cancel { background:#e5e7eb; }
-  .del    { background:#fee2e2; color:#b91c1c; }
+  .save   { background: var(--accent); color:#fff; }
+  .cancel { background: var(--chip); color: var(--fg); }
+  .del    { background: var(--danger-bg); color: var(--danger-fg); }
   .opts { margin-top:8px; text-align:right; }
-  .opts a { color:#6b7280; font-size:11px; cursor:pointer; text-decoration:underline; }
-  select { padding:5px; border:1px solid #d1d5db; border-radius:5px; }
+  .opts a { color: var(--muted); font-size:11px; cursor:pointer; text-decoration:underline; }
+  select { padding:5px; border:1px solid var(--border); border-radius:5px; color: var(--fg); background: var(--bg); }
+  label { font-size:11px; color: var(--muted); }
 </style></head>
 <body>
   <div id="list">
     <h3>Loadouts</h3>
     <div id="items"></div>
     <button class="add" id="addBtn">+ New loadout</button>
+    <button class="capture" id="captureBtn" title="Snapshot every tab in this window into a new loadout">&#8853; Save window as loadout</button>
+    <div class="error" id="errorBox"></div>
     <div class="opts"><a id="optionsLink">Settings</a></div>
   </div>
 
   <div id="editor">
     <h3 id="editorTitle">New loadout</h3>
     <input id="fName" placeholder="Name (e.g. Bug investigation)">
-    <label style="font-size:11px;color:#6b7280;">Color</label>
+    <label>Color</label>
     <select id="fColor">
       <option value="blue">Blue</option><option value="red">Red</option>
       <option value="green">Green</option><option value="yellow">Yellow</option>
@@ -49,7 +72,7 @@
       <option value="orange">Orange</option><option value="pink">Pink</option>
       <option value="grey">Grey</option>
     </select>
-    <label style="font-size:11px;color:#6b7280;">URLs (one per line)</label>
+    <label>URLs (one per line)</label>
     <textarea id="fUrls" placeholder="https://dev.azure.com/...&#10;https://github.com/...&#10;https://confluence..."></textarea>
     <div class="row">
       <button class="save"   id="saveBtn">Save</button>
@@ -58,6 +81,7 @@
     <div class="row">
       <button class="del" id="delBtn" style="display:none;">Delete</button>
     </div>
+    <div class="error" id="editorError"></div>
   </div>
 
   <script src="popup.js"></script>

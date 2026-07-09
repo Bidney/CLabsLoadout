@@ -2,11 +2,24 @@
 <html><head><meta charset="utf-8">
 <title>CLabs Loadout settings</title>
 <style>
-  body { font: 14px system-ui; padding: 24px; max-width: 480px; }
+  :root { --fg:#1f2937; --bg:#ffffff; --muted:#6b7280; --border:#d1d5db; --chip:#e5e7eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#f3f4f6; --bg:#1f2937; --muted:#9ca3af; --border:#4b5563; --chip:#374151; }
+  }
+  body { font: 14px system-ui; padding: 24px; max-width: 480px; color: var(--fg); background: var(--bg); }
   h2 { margin-top: 0; }
+  h3 { margin: 24px 0 8px; font-size: 14px; }
   label { display:block; margin: 10px 0; }
-  select { padding: 6px; }
+  select { padding: 6px; color: var(--fg); background: var(--bg); border:1px solid var(--border); border-radius:5px; }
+  button { cursor:pointer; border:none; border-radius:6px; padding:8px 12px; font-size:13px;
+    background: var(--chip); color: var(--fg); margin-right: 8px; }
+  .primary { background:#3b82f6; color:#fff; }
+  .hint { color: var(--muted); font-size: 12px; margin: 6px 0 0; }
   #status { color:#059669; font-size:12px; visibility:hidden; }
+  #ioStatus { font-size:12px; margin-top:8px; min-height:16px; }
+  #ioStatus.ok { color:#059669; }
+  #ioStatus.err { color:#dc2626; }
+  .checkline { display:flex; align-items:center; gap:6px; font-size:13px; margin: 8px 0; }
 </style></head>
 <body>
   <h2>CLabs Loadout</h2>
@@ -18,5 +31,17 @@
     </select>
   </label>
   <p id="status">Saved</p>
+
+  <h3>Backup</h3>
+  <button class="primary" id="exportBtn">Export loadouts</button>
+  <button id="importBtn">Import loadouts</button>
+  <input type="file" id="importFile" accept="application/json,.json" style="display:none">
+  <label class="checkline">
+    <input type="checkbox" id="replaceOnImport">
+    Replace existing loadouts on import (unchecked = add alongside)
+  </label>
+  <p class="hint">Exports are plain JSON: your loadout names, colors, and URLs. Nothing else.</p>
+  <p id="ioStatus"></p>
+
   <script src="options.js"></script>
 </body></html>
