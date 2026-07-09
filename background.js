@@ -17,9 +17,17 @@ async function saveSettings(s) {
   await chrome.storage.sync.set({ [SETTINGS_KEY]: s });
 }
 
+function normalizeUrl(raw) {
+  const url = String(raw || "").trim();
+  if (!url) return "";
+  if (/^(javascript|data|vbscript):/i.test(url)) return "";
+  if (!/^[a-z][a-z0-9+.-]*:/i.test(url)) return `https://${url}`;
+  return url;
+}
+
 async function openWorkspace(ws) {
   const { openIn } = await getSettings();
-  const urls = ws.urls.filter(Boolean);
+  const urls = (ws.urls || []).map(normalizeUrl).filter(Boolean);
   if (urls.length === 0) return { error: "empty" };
 
   if (openIn === "newWindow") {

@@ -3,7 +3,7 @@
   "name": "CLabs Loadout",
   "version": "0.1.0",
   "description": "Create collections of tabs and open them in a group with one click.",
-  "permissions": ["tabs", "tabGroups", "storage"],
+  "permissions": ["tabGroups", "storage"],
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
