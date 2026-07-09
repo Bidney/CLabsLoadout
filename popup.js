@@ -5,7 +5,7 @@ let workspaces = [];
 let editingId = null; // null = creating new
 
 async function render() {
-  workspaces = await send({ type: "list" });
+  workspaces = (await send({ type: "list" })) || [];
   const items = $("items");
   items.innerHTML = "";
 
@@ -39,7 +39,7 @@ function openEditor(ws) {
   $("editorTitle").textContent = ws ? "Edit loadout" : "New loadout";
   $("fName").value  = ws ? ws.name : "";
   $("fColor").value = ws ? (ws.color || "blue") : "blue";
-  $("fUrls").value  = ws ? ws.urls.join("\n") : "";
+  $("fUrls").value  = ws ? (ws.urls || []).join("\n") : "";
   $("delBtn").style.display = ws ? "block" : "none";
   showEditor(true);
 }
@@ -78,7 +78,7 @@ function cssColor(c) {
   return map[c] || map.blue;
 }
 function escapeHtml(s) {
-  return s.replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&#60;",">":"&#62;",'"':"&quot;","'":"&#39;" }[c]));
+  return String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&#60;",">":"&#62;",'"':"&quot;","'":"&#39;" }[c]));
 }
 
 render();
