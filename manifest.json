@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "CLabs Loadout",
-  "version": "0.2.0",
-  "description": "Create collections of tabs and open them in a group with one click.",
+  "name": "CLabs Loadout - Tab Group Workspaces",
+  "version": "0.2.2",
+  "description": "Save tabs as named workspaces, open them in color-coded tab groups, and restore your workflow with one click.",
+  "homepage_url": "https://github.com/Bidney/CLabsLoadout",
   "permissions": ["tabGroups", "storage", "tabs", "contextMenus", "favicon"],
   "omnibox": { "keyword": "lo" },
   "icons": {

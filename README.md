@@ -2,6 +2,8 @@
 
 Chrome extension for tab-group workspaces. A loadout is a named, colored collection of URLs that opens as a single tab group with one click - and closes just as fast.
 
+![CLabs Loadout - your project tabs, ready in one click](store-assets/screenshot-1.png)
+
 ## Features
 
 - **Loadouts as tab groups**: open a saved set of URLs as a colored, titled tab group, in a new window or the current one.
@@ -26,6 +28,12 @@ Loadouts are stored in Chrome sync storage, one item per loadout, so they follow
 - `favicon`: Chrome's built-in favicon cache for the list icons - no network requests.
 
 The extension makes no network calls and collects nothing.
+
+See the [privacy policy](PRIVACY.md) for the full storage and permission disclosures.
+
+## Support development
+
+CLabs Loadout is free, open source, and has no ads or analytics. If it saves you time, you can [buy Eugene a coffee](https://buycoffee.to/bidney).
 
 ## Install (unpacked)
 

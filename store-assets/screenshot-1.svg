@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <rect width="1280" height="800" fill="#f5f7fb"/>
+  <circle cx="1120" cy="80" r="230" fill="#dce9ff"/>
+  <circle cx="100" cy="760" r="180" fill="#e7fff4"/>
+  <g transform="translate(92 118)">
+    <rect width="76" height="76" rx="20" fill="#3d7df0"/>
+    <rect x="21" y="20" width="42" height="34" rx="6" fill="#fff" opacity=".55"/>
+    <rect x="15" y="29" width="42" height="34" rx="6" fill="#fff"/>
+    <path d="M29 51 44 37m-8 0h8v8" fill="none" stroke="#3d7df0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="92" y="260" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#17233d">Your project tabs,</text>
+  <text x="92" y="324" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#3d7df0">ready in one click.</text>
+  <text x="94" y="382" font-family="Arial, sans-serif" font-size="24" fill="#536079">Save repeatable browser setups as named,</text>
+  <text x="94" y="416" font-family="Arial, sans-serif" font-size="24" fill="#536079">color-coded tab group workspaces.</text>
+  <g font-family="Arial, sans-serif" font-size="20" fill="#263451">
+    <circle cx="108" cy="480" r="7" fill="#24b47e"/><text x="128" y="487">Save the current window</text>
+    <circle cx="108" cy="526" r="7" fill="#24b47e"/><text x="128" y="533">Open or focus without duplicates</text>
+    <circle cx="108" cy="572" r="7" fill="#24b47e"/><text x="128" y="579">Update from the live tab group</text>
+  </g>
+  <g transform="translate(692 82)" font-family="Arial, sans-serif">
+    <rect width="492" height="636" rx="24" fill="#fff" stroke="#d7deea" stroke-width="2"/>
+    <rect x="0" y="0" width="492" height="54" rx="24" fill="#edf1f7"/>
+    <circle cx="25" cy="27" r="6" fill="#ff6b6b"/><circle cx="45" cy="27" r="6" fill="#ffd166"/><circle cx="65" cy="27" r="6" fill="#29c780"/>
+    <text x="26" y="99" font-size="23" font-weight="700" fill="#17233d">Loadouts</text>
+    <g transform="translate(24 126)">
+      <rect width="444" height="74" rx="12" fill="#f7f9fc"/>
+      <circle cx="22" cy="37" r="8" fill="#ef4444"/><rect x="45" y="24" width="26" height="26" rx="6" fill="#24292f"/>
+      <text x="85" y="34" font-size="19" font-weight="700" fill="#1f2937">Incident response</text><text x="85" y="55" font-size="14" fill="#758198">8 tabs</text>
+      <rect x="352" y="19" width="70" height="36" rx="8" fill="#3d7df0"/><text x="371" y="43" font-size="15" font-weight="700" fill="#fff">Open</text>
+    </g>
+    <g transform="translate(24 212)">
+      <rect width="444" height="74" rx="12" fill="#f7f9fc"/>
+      <circle cx="22" cy="37" r="8" fill="#22c55e"/><rect x="45" y="24" width="26" height="26" rx="6" fill="#1671c5"/>
+      <text x="85" y="34" font-size="19" font-weight="700" fill="#1f2937">Azure platform</text><text x="85" y="55" font-size="14" fill="#758198">12 tabs</text>
+      <rect x="350" y="19" width="72" height="36" rx="8" fill="#e9eef6"/><text x="364" y="43" font-size="15" font-weight="700" fill="#4b5870">Focus</text>
+    </g>
+    <g transform="translate(24 298)">
+      <rect width="444" height="74" rx="12" fill="#f7f9fc"/>
+      <circle cx="22" cy="37" r="8" fill="#a855f7"/><rect x="45" y="24" width="26" height="26" rx="6" fill="#f59e0b"/>
+      <text x="85" y="34" font-size="19" font-weight="700" fill="#1f2937">Research sprint</text><text x="85" y="55" font-size="14" fill="#758198">6 tabs</text>
+      <rect x="352" y="19" width="70" height="36" rx="8" fill="#3d7df0"/><text x="371" y="43" font-size="15" font-weight="700" fill="#fff">Open</text>
+    </g>
+    <rect x="24" y="412" width="444" height="52" rx="10" fill="#24b47e"/><text x="179" y="445" font-size="17" font-weight="700" fill="#fff">+ New loadout</text>
+    <rect x="24" y="478" width="444" height="52" rx="10" fill="#edf1f7"/><text x="148" y="511" font-size="17" font-weight="700" fill="#34425e">Save window as loadout</text>
+    <text x="24" y="581" font-size="14" fill="#758198">Ctrl+Shift+L for instant access</text>
+  </g>
+</svg>

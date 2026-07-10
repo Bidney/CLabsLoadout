@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <rect width="1280" height="800" fill="#0f172a"/>
+  <text x="80" y="105" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#fff">Switch contexts without rebuilding your browser.</text>
+  <text x="82" y="150" font-family="Arial, sans-serif" font-size="22" fill="#aebbd2">Open a complete workflow as one named Chrome tab group.</text>
+  <g transform="translate(80 210)" font-family="Arial, sans-serif">
+    <rect width="1120" height="500" rx="22" fill="#fff"/>
+    <rect width="1120" height="82" rx="22" fill="#dfe5ef"/>
+    <circle cx="28" cy="28" r="7" fill="#ff6b6b"/><circle cx="52" cy="28" r="7" fill="#ffd166"/><circle cx="76" cy="28" r="7" fill="#29c780"/>
+    <rect x="118" y="12" width="155" height="38" rx="10" fill="#cce0ff"/><circle cx="136" cy="31" r="7" fill="#3d7df0"/><text x="151" y="37" font-size="14" font-weight="700" fill="#26436d">Azure portal</text>
+    <rect x="280" y="12" width="134" height="38" rx="10" fill="#cce0ff"/><circle cx="298" cy="31" r="7" fill="#3d7df0"/><text x="313" y="37" font-size="14" font-weight="700" fill="#26436d">Terraform</text>
+    <rect x="421" y="12" width="122" height="38" rx="10" fill="#cce0ff"/><circle cx="439" cy="31" r="7" fill="#3d7df0"/><text x="454" y="37" font-size="14" font-weight="700" fill="#26436d">GitHub</text>
+    <rect x="550" y="12" width="140" height="38" rx="10" fill="#cce0ff"/><circle cx="568" cy="31" r="7" fill="#3d7df0"/><text x="583" y="37" font-size="14" font-weight="700" fill="#26436d">Monitoring</text>
+    <rect x="118" y="57" width="572" height="8" rx="4" fill="#3d7df0"/>
+    <rect x="82" y="100" width="956" height="52" rx="26" fill="#f1f4f8"/><text x="116" y="133" font-size="16" fill="#61708a">portal.azure.com / project-dashboard</text>
+    <g transform="translate(105 195)">
+      <rect width="385" height="235" rx="16" fill="#f5f8fc" stroke="#dde5ef"/>
+      <text x="26" y="45" font-size="19" font-weight="700" fill="#1f2b43">Project dashboard</text>
+      <rect x="26" y="76" width="142" height="102" rx="12" fill="#dce9ff"/><text x="44" y="113" font-size="15" fill="#335683">Environment</text><text x="44" y="153" font-size="25" font-weight="700" fill="#2057aa">Production</text>
+      <rect x="188" y="76" width="170" height="102" rx="12" fill="#e5fff4"/><text x="206" y="113" font-size="15" fill="#39735e">Services healthy</text><text x="206" y="153" font-size="25" font-weight="700" fill="#16855e">24 / 24</text>
+    </g>
+    <g transform="translate(530 195)">
+      <rect width="485" height="235" rx="16" fill="#f5f8fc" stroke="#dde5ef"/>
+      <text x="26" y="45" font-size="19" font-weight="700" fill="#1f2b43">The whole workspace opens together</text>
+      <circle cx="42" cy="92" r="7" fill="#3d7df0"/><text x="63" y="99" font-size="17" fill="#43516b">Named and color-coded in Chrome</text>
+      <circle cx="42" cy="132" r="7" fill="#3d7df0"/><text x="63" y="139" font-size="17" fill="#43516b">Focused instead of duplicated</text>
+      <circle cx="42" cy="172" r="7" fill="#3d7df0"/><text x="63" y="179" font-size="17" fill="#43516b">Closed safely when the task is done</text>
+    </g>
+  </g>
+</svg>

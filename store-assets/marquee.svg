@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="560" viewBox="0 0 1400 560">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#173b7a"/><stop offset="1" stop-color="#3d7df0"/></linearGradient></defs>
+  <rect width="1400" height="560" fill="url(#g)"/>
+  <circle cx="1260" cy="20" r="300" fill="#fff" opacity=".07"/><circle cx="90" cy="580" r="260" fill="#36d399" opacity=".12"/>
+  <g transform="translate(100 106)"><rect width="90" height="90" rx="25" fill="#fff" opacity=".16"/><rect x="27" y="24" width="48" height="40" rx="7" fill="#fff" opacity=".55"/><rect x="18" y="36" width="48" height="40" rx="7" fill="#fff"/><path d="M34 61 53 43m-10 0h10v10" fill="none" stroke="#3d7df0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="100" y="265" font-family="Arial, sans-serif" font-size="62" font-weight="700" fill="#fff">Your workflow,</text>
+  <text x="100" y="330" font-family="Arial, sans-serif" font-size="62" font-weight="700" fill="#fff">one click away.</text>
+  <text x="104" y="378" font-family="Arial, sans-serif" font-size="22" fill="#e5eeff">Named, color-coded tab group workspaces.</text>
+  <g transform="translate(860 95)" font-family="Arial, sans-serif"><rect width="430" height="370" rx="24" fill="#fff"/>
+    <text x="30" y="56" font-size="22" font-weight="700" fill="#17233d">Loadouts</text>
+    <g transform="translate(26 82)"><rect width="378" height="62" rx="11" fill="#f3f6fb"/><circle cx="22" cy="31" r="7" fill="#ef4444"/><text x="46" y="28" font-size="17" font-weight="700" fill="#1f2937">Incident response</text><text x="46" y="46" font-size="12" fill="#758198">8 tabs</text><rect x="297" y="13" width="62" height="35" rx="8" fill="#3d7df0"/><text x="314" y="36" font-size="14" font-weight="700" fill="#fff">Open</text></g>
+    <g transform="translate(26 156)"><rect width="378" height="62" rx="11" fill="#f3f6fb"/><circle cx="22" cy="31" r="7" fill="#22c55e"/><text x="46" y="28" font-size="17" font-weight="700" fill="#1f2937">Azure platform</text><text x="46" y="46" font-size="12" fill="#758198">12 tabs</text><rect x="297" y="13" width="62" height="35" rx="8" fill="#e4eaf3"/><text x="309" y="36" font-size="14" font-weight="700" fill="#48566e">Focus</text></g>
+    <g transform="translate(26 230)"><rect width="378" height="62" rx="11" fill="#f3f6fb"/><circle cx="22" cy="31" r="7" fill="#a855f7"/><text x="46" y="28" font-size="17" font-weight="700" fill="#1f2937">Research sprint</text><text x="46" y="46" font-size="12" fill="#758198">6 tabs</text><rect x="297" y="13" width="62" height="35" rx="8" fill="#3d7df0"/><text x="314" y="36" font-size="14" font-weight="700" fill="#fff">Open</text></g>
+  </g>
+  <text x="103" y="430" font-family="Arial, sans-serif" font-size="19" fill="#cfe0ff">Free · Open source · No analytics</text>
+</svg>

@@ -20,6 +20,10 @@
   #ioStatus.ok { color:#059669; }
   #ioStatus.err { color:#dc2626; }
   .checkline { display:flex; align-items:center; gap:6px; font-size:13px; margin: 8px 0; }
+  .support { margin-top:24px; padding-top:16px; border-top:1px solid var(--border); }
+  .donate { display:inline-block; padding:9px 14px; border-radius:7px; background:#3b82f6;
+    color:#fff; font-weight:600; text-decoration:none; }
+  .donate:hover { background:#2563eb; }
 </style></head>
 <body>
   <h2>CLabs Loadout</h2>
@@ -42,6 +46,12 @@
   </label>
   <p class="hint">Exports are plain JSON: your loadout names, colors, and URLs. Nothing else.</p>
   <p id="ioStatus"></p>
+
+  <div class="support">
+    <h3>Support development</h3>
+    <p class="hint">CLabs Loadout is free and has no ads or analytics. If it saves you time, you can support its development.</p>
+    <p><a class="donate" href="https://buycoffee.to/bidney" target="_blank" rel="noopener noreferrer">☕ Buy Eugene a coffee</a></p>
+  </div>
 
   <script src="options.js"></script>
 </body></html>
